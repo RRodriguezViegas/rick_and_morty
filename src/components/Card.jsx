@@ -2,7 +2,7 @@ import styles from '../styles/Card.module.css';
 
 export default function Card(props) {
   return (
-    <div className={`${styles.card}${styles.grow}`}>
+    <div className={`${styles.card} ${styles.grow}`}>
       <img src={props.image} alt='' />
       <h2 className={styles.name}>{props.name}</h2>
       <h2>{props.status}</h2>

@@ -3,7 +3,6 @@ import styles from '../styles/SearchBar.module.css';
 export default function SearchBar(props) {
   return (
     <div className={styles.searchbardiv}>
-      {/* <div className='label'>SUBMIT YOUR SEARCH</div> */}
       <div className={styles.searchBar}>
         <input
           className={styles.searchInput}
