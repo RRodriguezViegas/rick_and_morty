@@ -1,9 +1,9 @@
 import Card from './Card';
-import style from './Card.css';
+import styles from '../styles/Card.module.css';
 
 export default function Cards(props) {
   return (
-    <div className='cardsGrid'>
+    <div className={styles.cardsGrid}>
       {props.characters.map(e => (
         <Card
           key={e.id}

@@ -1,12 +1,20 @@
-import style from './SearchBar.css';
+import styles from '../styles/SearchBar.module.css';
 
 export default function SearchBar(props) {
   return (
-    <div className='searchbardiv'>
+    <div className={styles.searchbardiv}>
       {/* <div className='label'>SUBMIT YOUR SEARCH</div> */}
-      <div className='searchBar'>
-        <input className='searchInput' placeholder='Search' type='search' />
-        <button className='searchSubmit' onClick={props.onSearch} type='submit'>
+      <div className={styles.searchBar}>
+        <input
+          className={styles.searchInput}
+          placeholder='Search'
+          type='search'
+        />
+        <button
+          className={styles.searchSubmit}
+          onClick={props.onSearch}
+          type='submit'
+        >
           <svg viewBox='0 0 24 24'>
             <path
               fill='#666666'
