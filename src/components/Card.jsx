@@ -10,7 +10,10 @@ export default function Card(props) {
       <h2>{props.gender}</h2>
       <h2>{props.origin.name}</h2>
       <div className={styles.closeDiv}>
-        <button className={styles.close} onClick={props.onClose}>
+        <button
+          className={styles.close}
+          onClick={() => props.onClose(props.id)}
+        >
           Close
         </button>
       </div>
