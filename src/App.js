@@ -1,6 +1,9 @@
 import styles from './styles/App.module.css';
 import Cards from './components/Cards.jsx';
 import Nav from './components/Nav.jsx';
+import About from './components/About.jsx';
+import Detail from './components/Detail';
+import Error404 from './components/error404';
 import { useState } from 'react';
 import axios from 'axios';
 import { Route, Routes } from 'react-router-dom';
@@ -26,12 +29,16 @@ function App() {
 
   return (
     <div className={styles.App}>
-      <div className='holas'>
-        <Nav onSearch={onSearch} />
-      </div>
-      <div>
-        <Cards characters={characters} onClose={onClose} />
-      </div>
+      <Nav onSearch={onSearch} />
+      <Routes>
+        <Route
+          path='/home'
+          element={<Cards characters={characters} onClose={onClose} />}
+        />
+        <Route path='/about' element={<About />} />
+        <Route path='/detail/:detailId' element={<Detail />} />
+        <Route path='*' element={<Error404 />} />
+      </Routes>
     </div>
   );
 }

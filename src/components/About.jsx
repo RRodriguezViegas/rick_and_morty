@@ -1,3 +1,9 @@
 import React from 'react';
 
-<h1>Simulamos el about que algún día haré</h1>;
+export default function About() {
+  return (
+    <div>
+      <h1>Simulamos el about que algún día voy a hacer</h1>
+    </div>
+  );
+}

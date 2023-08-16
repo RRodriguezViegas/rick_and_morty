@@ -6,6 +6,7 @@ export default function Cards(props) {
     <div className={styles.cardsGrid}>
       {props.characters.map(e => (
         <Card
+          id={e.id}
           key={e.id}
           name={e.name}
           status={e.status}
