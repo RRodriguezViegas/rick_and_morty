@@ -1,17 +1,17 @@
 .searchbardiv {
-    width: 100%;
+    width: 10%;
     max-width: 67.25rem;
     margin: 6rem auto;
  }
  
  .searchBar {
-   width: 100%;
+   width: 70%;
    display: flex;
    flex-direction: row;
    align-items: center;
  }
  
- .searchInput {
+ /* .searchInput {
    width: 100%;
    height: 2.8rem;
    background: #1F1A33;
@@ -23,7 +23,7 @@
    font-size: 1rem;
    color: white;
    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2);
- }
+ } */
  
  .searchSubmit {
    width: 3.5rem;

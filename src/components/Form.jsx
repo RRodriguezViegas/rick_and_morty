@@ -24,27 +24,30 @@ const Form = ({ login }) => {
   };
 
   return (
-    <div>
+    <div className={styles.loginContainer}>
       <form>
-        <label>email</label>
+        <h1>Login</h1>
         <input
+          className={!errors.email ? styles.inputs : styles.danger}
           type='text'
           name='email'
+          placeholder='Email'
           value={userData.email}
           onChange={handleChange}
         />
-        {!errors.email ? null : <p className={styles.danger}>{errors.email}</p>}
+        {/* {!errors.email ? null : <p className={styles.danger}>{errors.email}</p>} */}
 
-        <label>password</label>
         <input
+          className={!errors.email ? styles.inputs : styles.danger}
           type='text'
           name='password'
+          placeholder='Password'
           value={userData.password}
           onChange={handleChange}
         />
-        {!errors.password ? null : (
+        {/* {!errors.password ? null : (
           <p className={styles.danger}>{errors.password}</p>
-        )}
+        )} */}
 
         <button onClick={handleSubmit}>Submit</button>
       </form>

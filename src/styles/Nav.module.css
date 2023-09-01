@@ -1,3 +1,12 @@
 .navBar {
+    width: 900px;
+    height: 70px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap:wrap;
+    align-items: center;
     background-color: red;
+    margin-top: 20px;
 }

@@ -1,3 +1,59 @@
-.danger {
-    color: red;
+.loginContainer {
+    position: relative;
+    background: #FFF;
+    background:rgba(0,0,0,0.13);
+    max-width: 360px;
+    margin: 0 auto 100px;
+    margin-top: 15%;
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.loginContainer h1 {
+    color: white;
+    text-align:center;
+    margin:30px 0;
+    font-size:30px;
+}
+
+.inputs  {
+    display:block;
+    width:300px;
+    margin:20px auto;
+    padding:15px;
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+    border:0;
+    border-radius: 5px;
+}
+
+.loginContainer button {
+    background: #471D7A;
+    border:0;
+    border-radius: 5px;
+    color:#fff;
+    padding:10px;
+    font-size:20px;
+    width:330px;
+    margin:20px auto;
+    display:block;
+    cursor:pointer;
+}
+
+.loginContainer button:active{
+    background:#401a6e;
+  }
+
+  .danger {
+    display:block;
+    width:300px;
+    margin:20px auto;
+    padding:15px;
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+    border-width: 1px;
+    border-color: #c00000;
+    border-style: solid;
+    border-radius: 5px;
 }

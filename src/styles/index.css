@@ -1,6 +1,9 @@
 body {
-  background-color: #322B50;
-  /* background-image: url(https://i0.wp.com/www.coliseugeek.com.br/wp-content/uploads/2023/01/c930c-clickwallpapers-rickandmorty-desenho-4k-img8-minbase-scaled-1.jpg?resize=2048%2C1152&ssl=1); */
+  background: #614385;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #516395, #614385);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
