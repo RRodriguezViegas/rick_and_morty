@@ -1,19 +1,19 @@
-var http = require('http');
-var data = require('./utils/data.js');
+const http = require('http');
+const PORT = 3001;
+const getCharById = require('./controllers/getCharById');
 
 http
-  .createServer((request, response) => {
-    response.setHeader('Access-Control-Allow-Origin', '*');
-    if (request.url.includes('/rickandmorty/character')) {
-      let res = request.url.match(/er..+$/i);
-      let ress = res[0].split('/');
-      let resNumber = Number(ress[1]);
-      if (resNumber) {
-        response.writeHead(200, { 'Content-Type': 'application/json' });
-        response.end(
-          JSON.stringify(data[data.findIndex(x => x.id === resNumber)])
-        );
-      }
+  .createServer((req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    const { url } = req;
+    if (url.includes('/rickandmorty/character')) {
+      const id = Number(url.split('/').pop());
+      getCharById(res, id);
+    } else {
+      res.writeHead(400, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Route not found' }));
     }
   })
-  .listen(3001, 'localhost');
+  .listen(PORT, () => {
+    console.log(`Server running on port ${PORT} :o`);
+  });

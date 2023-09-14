@@ -1,6 +1,6 @@
 import { ADD_FAV, REMOVE_FAV } from './types';
 
-const initialState = { myFavorites: ['rama'] };
+const initialState = { myFavorites: [] };
 
 const rootReducer = (state = initialState, { type, payload }) => {
   switch (type) {

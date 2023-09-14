@@ -3,6 +3,7 @@ import Cards from './components/Cards.jsx';
 import Nav from './components/Nav.jsx';
 import About from './components/About.jsx';
 import Detail from './components/Detail';
+import Favorites from './components/Favorites';
 import Form from './components/Form';
 import Error404 from './components/error404';
 import { useState } from 'react';
@@ -57,6 +58,7 @@ function App() {
         <Route path='/detail/:detailId' element={<Detail />} />
         <Route path='/' element={<Form login={login} />} />
         <Route path='*' element={<Error404 />} />
+        <Route path='/favorites' element={<Favorites />} />
       </Routes>
     </div>
   );
