@@ -4,7 +4,7 @@ import { addFav, removeFav } from '../redux/actions';
 import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 
-export function Card({
+function Card({
   // destructuring
   image,
   id,
@@ -15,8 +15,8 @@ export function Card({
   origin,
   onClose,
   myFavorites,
-  // addFav,
-  // removeFav,
+  addFavorites,
+  removeFavorites,
 }) {
   const [isFav, setIsFav] = useState(false);
 
@@ -32,10 +32,10 @@ export function Card({
     if (isFav) {
       setIsFav(false);
       // console.log(typeof removeFav);
-      removeFav(id);
+      removeFavorites(id);
     } else {
       setIsFav(true);
-      addFav({ name, status, species, image, id });
+      addFavorites({ name, status, species, image, id });
     }
   };
 
@@ -63,21 +63,21 @@ export function Card({
   );
 }
 
-export function mapStateToProps(state) {
+function mapDispatchToProps(dispatch) {
   return {
-    myFavorites: state.myFavorites,
-  };
-}
-
-export function mapDispatchToProps(dispatch) {
-  return {
-    addFav: character => {
+    addFavorites: character => {
       dispatch(addFav(character));
     },
-    removeFav: id => {
+    removeFavorites: id => {
       dispatch(removeFav(id));
     },
   };
 }
+
+const mapStateToProps = state => {
+  return {
+    myFavorites: state.myFavorites,
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Card);

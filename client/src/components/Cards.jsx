@@ -1,4 +1,4 @@
-import { Card } from './Card';
+import Card from './Card';
 import styles from '../styles/Card.module.css';
 
 export default function Cards(props) {
